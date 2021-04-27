@@ -28,24 +28,84 @@ body{
     color: #fff;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(300px));
+    grid-template-rows: repeat(auto-fit, minmax(200px));
     grid-template-areas: 
     "community"
     "subscriptions"
     "why";
 }
 
+/* Cell 1 */
 .community {
-    background-color: var(--prime-bg);
+    background-color: #fff;
     grid-area: community;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
 }
+.c1_title {
+    color: #008b8b;
+}
+.highlight {
+    color: var(--highlight);
+    margin-top: 1.5rem;
+}
+.c1_par {
+    color: var(--top-text);
+    margin-top: 1.5rem;
+    line-height: 2rem;
+}
+
+/* Cell 2 */
 .subscription {
-    background-color: var(--third-bg);
+    background-color: #008b8b;
     grid-area: subscriptions;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
+
+h1 {
+    margin-top: 2rem;
+}
+
+.c2_par {
+    margin-top: 1.4rem;
+}
+
+button {
+    padding: 16px;
+    box-shadow: 10px 12px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--highlight);
+    margin-top: 2rem;
+}
+
+.per_month {
+    position: relative;
+    display: inline-block;
+    color: var(--prime-bg);
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+}
+
+
+/* Cell 3 */
 .why_us {
     background-color: var(--third-bg); 
     grid-area: why; 
+    padding: 35px
+}
+
+.c3_par {
+    margin-top: 1.6rem;
+    line-height: 1.5rem;
+    align-self: left;
 }
 
 
