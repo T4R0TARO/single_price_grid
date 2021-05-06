@@ -1,34 +1,42 @@
-:root {
+/* Custom Variables */
+:root 
+{
     --highlight: hsl(71, 73%, 54%);
     --prime-bg: hsl(204, 43%, 93%);
     --top-text: hsl(218, 22%, 67%);
     --third-bg: hsl(179, 62%, 43%);
 }
 
-html {
+/* Base Styles */
+html 
+{
     box-sizing: border-box;
     font-size: 100%;
 }
 
-*, *::before, *::after {
+*, *::before, *::after 
+{
     box-sizing: inherit;
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body
+{
     font-size: 1rem;
     font-family: 'Karla', sans-serif;
     padding: 0; 
     margin: 0;
 }
 
-.wrapper {
+/* Main Grid Wrapper */
+.wrapper 
+{
     height: 100vh;
     color: #fff;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(200px));
+    grid-template-rows: repeat(auto-fit, minmax(100px));
     grid-template-areas: 
     "community"
     "subscriptions"
@@ -36,28 +44,38 @@ body{
 }
 
 /* Cell 1 */
-.community {
+.community 
+{
     background-color: #fff;
     grid-area: community;
     padding: 35px;
     display: flex;
     flex-direction: column;
 }
-.c1_title {
+
+.c1_title 
+{
     color: #008b8b;
 }
-.highlight {
+
+.highlight 
+{
     color: var(--highlight);
     margin-top: 1.5rem;
 }
-.c1_par {
+
+.c1_par 
+{
     color: var(--top-text);
     margin-top: 1.5rem;
     line-height: 2rem;
+    max-width: 550px;
+
 }
 
 /* Cell 2 */
-.subscription {
+.subscription 
+{
     background-color: #008b8b;
     grid-area: subscriptions;
     padding: 35px;
@@ -66,15 +84,18 @@ body{
     align-items: left;
 }
 
-h1 {
+h1 
+{
     margin-top: 2rem;
 }
 
-.c2_par {
+.c2_par 
+{
     margin-top: 1.4rem;
 }
 
-button {
+button 
+{
     padding: 16px;
     box-shadow: 10px 12px 10px rgba(0, 0, 0, 0.2);
     border-radius: 9px;
@@ -86,7 +107,8 @@ button {
     margin-top: 2rem;
 }
 
-.per_month {
+.per_month 
+{
     position: relative;
     display: inline-block;
     color: var(--prime-bg);
@@ -96,13 +118,15 @@ button {
 
 
 /* Cell 3 */
-.why_us {
+.why_us 
+{
     background-color: var(--third-bg); 
     grid-area: why; 
     padding: 35px
 }
 
-.c3_par {
+.c3_par 
+{
     margin-top: 1.6rem;
     line-height: 1.5rem;
     align-self: left;
@@ -110,12 +134,42 @@ button {
 
 
 
-@media (min-width: 768px) {
-    .wrapper {
+@media (min-width: 768px) 
+{
+    .wrapper 
+    {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
         "community community"
         "subscriptions why";
     }
+    .community 
+    {
+        justify-content: center;
+    }
+    .subscription 
+    {
+        justify-content: center;
+    }
+    .why_us 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
+
+/* Main Footer */
+.attribution 
+{
+bottom: 0;
+left: 0;
+font-size: 11px; 
+text-align: center; 
+}
+
+.attribution a 
+{
+color: hsl(228, 45%, 44%);
+ }
