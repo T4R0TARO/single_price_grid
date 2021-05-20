@@ -26,6 +26,10 @@ Users should be able to:
 
 ### Screenshot
 
+![image](https://user-images.githubusercontent.com/76195521/118912261-5dbe4a80-b8dc-11eb-869d-32201e57a2fa.png)
+
+![image](https://user-images.githubusercontent.com/76195521/118912176-38c9d780-b8dc-11eb-98b9-0f3b4548fbca.png)
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
